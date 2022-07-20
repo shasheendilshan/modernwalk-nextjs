@@ -24,7 +24,7 @@ const ProductCard: React.FC<Props> = ({ product }) => {
         <h3>{product.title.substring(0, 100)}</h3>
       </div>
       <div className={style.imageContainer}>
-        <Image src={product.image} layout="fill" objectFit="contain" />
+        <Image src={product.image} layout="fill" objectFit="contain" priority />
       </div>
 
       <div
