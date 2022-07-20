@@ -1,7 +1,6 @@
 import "@styles/globals.css";
 import type { AppProps } from "next/app";
 import React from "react";
-import { TextContextProvider } from "@contexts/testContext";
 import Navbar from "@components/Navbar/Navbar.component";
 import { QueryProvider } from "@contexts/react query/reactQuery";
 import { UserProvider } from "@contexts/userContext";
@@ -16,12 +15,10 @@ function MyApp({ Component, pageProps }: AppProps) {
       <GlobalStateProvider>
         <CartProvider>
           <UserProvider>
-            <TextContextProvider>
-              <Toaster />
-              <ProductModal />
-              <Navbar />
-              <Component {...pageProps} />;
-            </TextContextProvider>
+            <Toaster />
+            <ProductModal />
+            <Navbar />
+            <Component {...pageProps} />;
           </UserProvider>
         </CartProvider>
       </GlobalStateProvider>
