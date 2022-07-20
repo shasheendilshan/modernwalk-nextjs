@@ -1,0 +1,14 @@
+.mainContainer{
+    @apply w-[100%] h-[70px] z-20 bg-white shadow-lg drop-shadow-lg fixed flex items-center top-0;
+ .navbar{
+    @apply container mx-auto flex items-center justify-between relative ;
+    .header{
+        @apply flex items-center justify-center h-full;
+
+        h1{
+           @apply text-3xl ml-5 md:ml-5 md:text-4xl font-bold text-text_main cursor-pointer;
+        }
+    }
+ }
+    
+}
