@@ -8,7 +8,6 @@
 .outlined{
     padding: 14px 24px 10px 24px;
     box-sizing: border-box;
-    box-shadow: 0px 0px 30px rgba(0, 25, 72, 0.5);
     
     @apply w-full rounded-[8px] text-btn_primary_normal border border-btn_primary_normal font-quicksand font-bold  text-base box-border;  
     @apply hover:bg-btn_outlined_hover hover:shadow-btn_hover;

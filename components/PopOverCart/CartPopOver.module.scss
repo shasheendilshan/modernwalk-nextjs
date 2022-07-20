@@ -83,10 +83,8 @@
 .cartItemMainContainer{
     @apply flex shadow-md rounded-xl h-28 overflow-hidden p-3  mx-1;
     .imageContainer{
-        @apply w-16;
-        img{
-            @apply w-16 h-16 object-contain ;
-        }
+        @apply w-16 h-16 relative;
+        
     }
     .midContainer{
         @apply w-48 px-1;

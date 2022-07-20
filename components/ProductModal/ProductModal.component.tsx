@@ -1,6 +1,7 @@
 import { useState, Fragment } from "react";
 import { Dialog, Transition } from "@headlessui/react";
 import { AiOutlineMinus, AiOutlinePlus, AiOutlineClose } from "react-icons/ai";
+import Image from "next/image";
 
 import { useGlobalContext } from "@contexts/globalStateContext";
 import { useCartContext } from "@contexts/cartContext";
@@ -62,7 +63,11 @@ const ProductModal = () => {
 
                 <div className={style.content}>
                   <div className={style.productImage}>
-                    <img src={product?.image} alt="product" />
+                    <Image
+                      src={product ? product.image : ""}
+                      layout="fill"
+                      objectFit="contain"
+                    />
                   </div>
                   <h3>{product && formatCurrency(product?.price)}</h3>
 
@@ -70,7 +75,7 @@ const ProductModal = () => {
                     <span onClick={decrement}>
                       <AiOutlineMinus color="#fff" />
                     </span>
-                    <div className="px-2 text-xl">{count}</div>
+                    <p>{count}</p>
                     <span onClick={increment}>
                       <AiOutlinePlus color="#fff" />
                     </span>

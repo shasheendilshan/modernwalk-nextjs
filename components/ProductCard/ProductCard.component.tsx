@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 
 import { IProduct } from "../../interfaces/products/products.interfaces";
 import { formatCurrency } from "@utils/formatCurancy";
@@ -23,7 +24,7 @@ const ProductCard: React.FC<Props> = ({ product }) => {
         <h3>{product.title.substring(0, 100)}</h3>
       </div>
       <div className={style.imageContainer}>
-        <img src={product.image} alt="product" />
+        <Image src={product.image} layout="fill" objectFit="contain" />
       </div>
 
       <div

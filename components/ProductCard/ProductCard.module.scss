@@ -8,11 +8,9 @@
      }
      
      .imageContainer{
-         @apply h-36 w-36 mb-2 flex justify-center;
-     
-         img{
-             @apply object-contain  h-36 w-36;
-         }
+         @apply h-36 w-36 mb-2 relative flex justify-center;
+         
+        
      }
      .contentContainer{
          @apply h-36  w-full rounded-lg p-3 flex flex-col items-center overflow-auto;

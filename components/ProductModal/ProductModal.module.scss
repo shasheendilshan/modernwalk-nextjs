@@ -44,18 +44,19 @@
         @apply text-xl font-quicksand font-bold py-2
       }
       .productImage{
-        @apply h-36 w-36 mb-2 flex justify-center mx-auto;
+        @apply h-36 w-36 relative mb-2 flex justify-center mx-auto;
         .img{
          @apply object-contain;
         }
      }
-     .productPrice{
-   
-     }
+    
      .countContainer{
        @apply flex items-center w-full px-36 py-3 justify-between  mb-4;
        span{
          @apply bg-blue-600 p-3 rounded-md  active:brightness-125 cursor-pointer;
+        }
+        p{
+          @apply px-2 text-xl font-quicksand;
         }
      }
      .description{

@@ -8,6 +8,7 @@ import {
   AiOutlineClose,
   AiOutlineShoppingCart,
 } from "react-icons/ai";
+import Image from "next/image";
 
 import { useCartContext } from "@contexts/cartContext";
 import { IProduct } from "@interfaces/products/products.interfaces";
@@ -35,7 +36,7 @@ const CartItem: React.FC<ItemProps> = ({
   return (
     <div key={product.id} className={style.cartItemMainContainer}>
       <div className={style.imageContainer}>
-        <img src={product.image} alt="" />
+        <Image src={product.image} layout="fill" objectFit="contain" />
       </div>
       <div className={style.midContainer}>
         <div className={style.productTitle}>
