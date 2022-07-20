@@ -1,19 +1,22 @@
 import React, { useState, useCallback, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
 import { BallBeat } from "react-pure-loaders";
+import { useRouter } from "next/router";
 
-import { getUser } from "../../services/users.services";
-import { useUserContext } from "../../context/userContext";
-import { IUser } from "../../interfaces/users/users.interfaces";
-import { Button, Input } from "../../components";
-import { validateSignIn } from "../../lib/helpers";
-import { IValidationProps } from "../../interfaces/global/global.interface";
+import { getUser } from "@services/users.services";
+import { useUserContext } from "@contexts/userContext";
+import { IUser } from "@interfaces/users/users.interfaces";
+import { validateSignIn } from "@utils/helpers";
+import { IValidationProps } from "@interfaces/global/global.interface";
+import Button from "@components/Button/Button.component";
+import Input from "@components/Input/Input.component";
+
 import {
   setRememberMe,
   getRememberMeDetails,
   removeRememberMeDetails,
-} from "../../lib/localStorage";
-import style from "./SignIn.module.scss";
+} from "@utils/localStorage";
+import style from "@styles/SignIn.module.scss";
+import Link from "next/link";
 
 const SignIn: React.FC = () => {
   const [email, setEmail] = useState<string>("");
@@ -26,7 +29,9 @@ const SignIn: React.FC = () => {
   );
 
   const userCtx = useUserContext();
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
+
+  const router = useRouter();
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -69,7 +74,7 @@ const SignIn: React.FC = () => {
     if (!response.error) {
       if (response?.data.length === 1) {
         userCtx?.setUserDetails(response.data[0]);
-        navigate("/");
+        router.push("/");
       } else {
         setError("Invalid email or password");
       }
@@ -157,13 +162,9 @@ const SignIn: React.FC = () => {
           </div>
           <div className={style.createAccount}>
             <label htmlFor="">Not yet register?</label>
-            <p
-              onClick={() => {
-                navigate("/sign-up");
-              }}
-            >
-              Create an account.
-            </p>
+            <Link href="/signUp">
+              <p>Create an account.</p>
+            </Link>
           </div>
         </form>
       </div>
