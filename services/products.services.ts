@@ -48,6 +48,28 @@ export const getAllProducts = async () => {
     }
   };
 
+  export const getAllCategories =async()=>{
+
+    try {
+      const res = await get(`/categories`);
+
+      const response:IResponse= {
+        data: res.data,
+        error: null,
+        status:res.status
+      }   
+      return response;
+    } catch (error:any) {
+     
+      const response:IResponse = {
+        data: [],
+        error: error
+      }  
+      return response;
+    }
+  }
+  
+
   export const getProductById =async(id:number)=>{
     try {
       const Product = await get(`/products/${id}`);

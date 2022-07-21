@@ -8,15 +8,26 @@ const Categories: React.FC = () => {
       <h2>Categories</h2>
 
       <div className={style.categoryContainer}>
-        <Link href="/category/men's-clothing">
+        <Link href="/products/men's-clothing">
           <span className={`${style.categoryCard} ${style.menCard}`}>
             <h1>Men's Clothing</h1>
           </span>
         </Link>
 
-        <Link href="/category/women's-clothing">
+        <Link href="/products/women's-clothing">
           <span className={`${style.categoryCard} ${style.womenCard}`}>
             <h1>Women's Clothing</h1>
+          </span>
+        </Link>
+        <Link href="/products/electronics">
+          <span className={`${style.categoryCard} ${style.menCard}`}>
+            <h1>Electronics</h1>
+          </span>
+        </Link>
+
+        <Link href="/products/jewelery">
+          <span className={`${style.categoryCard} ${style.womenCard}`}>
+            <h1>Jewelries</h1>
           </span>
         </Link>
       </div>

@@ -1,10 +1,15 @@
 import type { NextPage } from "next";
 import Categories from "@section-templates/Categories/Categories.section-template";
-import style from "./index.module.scss";
+import style from "@styles/index.module.scss";
 import FlashSalesStat from "@section-templates/FlashSalesStat/FlashSales";
-import { getAllProducts } from "@services/products.services";
+import { getAllProducts, getAllCategories } from "@services/products.services";
+import { IProduct } from "@interfaces/products/products.interfaces";
 
-const Home: NextPage = ({ products }: any) => {
+type Props = {
+  products: IProduct[];
+};
+
+const Home: NextPage<Props> = ({ products }) => {
   return (
     <div className={style.mainContainer}>
       <FlashSalesStat products={products} />
