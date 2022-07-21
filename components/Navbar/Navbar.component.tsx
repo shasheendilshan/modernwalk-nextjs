@@ -1,15 +1,16 @@
 import React from "react";
 import Link from "next/link";
-import { AiOutlineLogout } from "react-icons/ai";
 
 import { useUserContext } from "../../contexts/userContext";
 import Button from "@components/Button/Button.component";
 import CartPopOver from "@components/PopOverCart/CartPopOver.component";
 import style from "./Navbar.module.scss";
 import DropDownMenu from "@components/DropdownMenu/DropDownMenu.component";
+import { useRouter } from "next/router";
 
 const Navbar: React.FC = () => {
   const userCtx = useUserContext();
+  const router = useRouter();
   return (
     <div className={style.mainContainer}>
       <div className={style.navbar}>
@@ -21,9 +22,7 @@ const Navbar: React.FC = () => {
         <div className={style.btnContainer}>
           {!userCtx?.user ? (
             <div>
-              <Link href="/signIn">
-                <Button name="Sign in" />
-              </Link>
+              <Button name="Sign in" onClick={() => router.push("/signIn")} />
             </div>
           ) : (
             <>
