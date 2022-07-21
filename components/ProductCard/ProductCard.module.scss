@@ -1,5 +1,6 @@
 .mainContainer{
-    @apply h-full w-72 bg-white flex flex-col mx-auto items-center  rounded-lg shadow-card pt-2 cursor-pointer scale-90 hover:scale-100 transition duration-300 ease-linear;
+    @apply h-full w-72 bg-white flex flex-col mx-auto items-center  rounded-lg shadow-card pt-2 cursor-pointer scale-95;
+    //@apply hover:scale-100 transition duration-300 ease-linear;
     .titleContainer{
         @apply w-full p-2 h-24 overflow-hidden;
         h3{
