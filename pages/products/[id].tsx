@@ -1,14 +1,8 @@
 import React from "react";
-import Skeleton from "react-loading-skeleton";
-import { BallBeat } from "react-pure-loaders";
-import { useQuery } from "react-query";
 import "react-loading-skeleton/dist/skeleton.css";
 
 import { getSpecificCategory } from "@services/products.services";
-import {
-  IProduct,
-  productCategory,
-} from "@interfaces/products/products.interfaces";
+import { IProduct } from "@interfaces/products/products.interfaces";
 import ProductCard from "@components/ProductCard/ProductCard.component";
 import style from "./category.module.scss";
 import { getAllCategories } from "@services/products.services";
@@ -42,6 +36,7 @@ export const getStaticProps = async ({ params }: any) => {
       products: data?.data,
       title: params?.id,
     },
+    revalidate: 10,
   };
 };
 
