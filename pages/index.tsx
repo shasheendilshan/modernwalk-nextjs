@@ -2,7 +2,7 @@ import type { NextPage } from "next";
 import Categories from "@section-templates/Categories/Categories.section-template";
 import style from "@styles/index.module.scss";
 import FlashSalesStat from "@section-templates/FlashSalesStat/FlashSales";
-import { getAllProducts, getAllCategories } from "@services/products.services";
+import { getAllProducts } from "@services/products.services";
 import { IProduct } from "@interfaces/products/products.interfaces";
 
 type Props = {
@@ -27,6 +27,6 @@ export async function getStaticProps() {
     props: {
       products: products?.data,
     },
-    revalidate: 10,
+    revalidate: 5,
   };
 }

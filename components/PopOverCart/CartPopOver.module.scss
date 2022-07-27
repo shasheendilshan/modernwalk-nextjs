@@ -11,7 +11,7 @@
 }
 
 .popOverPanel{
-    @apply absolute top-14 right-0  z-10 bg-white overflow-hidden shadow-card w-[100vw] h-[calc(100vh-70px)] md:w-[400px] rounded-2xl  ;
+    @apply absolute top-14 right-0  z-10 bg-white overflow-hidden shadow-card w-[100vw] h-[calc(90vh-70px)] md:h-[calc(100vh-70px)] md:w-[400px] rounded-2xl  ;
     .popOverPanelHeader{
         @apply w-full  text-center bg-elephant_contrast flex justify-between px-2;
         .closeIcon{
@@ -38,7 +38,7 @@
           }
     }
     .productsContainer{
-      @apply flex flex-col gap-1 pb-[80px]  overflow-y-auto;
+      @apply flex flex-col gap-1 pb-[80px] pt-2 overflow-y-auto;
     }
     .cartEmptyContainer{
        @apply  w-full flex flex-col items-center justify-center;
@@ -81,7 +81,7 @@
 // cart item
 
 .cartItemMainContainer{
-    @apply flex shadow-md rounded-xl h-28 overflow-hidden p-3  mx-1;
+    @apply flex shadow-card rounded-xl h-28 overflow-hidden p-3  mx-1;
     .imageContainer{
         @apply w-16 h-16 relative;
         

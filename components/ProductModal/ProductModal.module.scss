@@ -51,12 +51,12 @@
      }
     
      .countContainer{
-       @apply flex items-center w-full px-36 py-3 justify-between  mb-4;
+       @apply flex items-center w-full px-36 py-3 justify-center  mb-4;
        span{
          @apply bg-blue-600 p-3 rounded-md  active:brightness-125 cursor-pointer;
         }
         p{
-          @apply px-2 text-xl font-quicksand;
+          @apply px-4 text-xl font-quicksand;
         }
      }
      .description{

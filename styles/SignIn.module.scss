@@ -18,6 +18,9 @@
     }
 }
 .form{
+        
+    @apply px-8 ;
+
     .forgotPassword{
         @apply flex items-center mt-1;
         p{

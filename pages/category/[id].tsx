@@ -21,24 +21,9 @@ type Props = {
 const Category: React.FC<Props> = ({ category, title }) => {
   const router = useRouter();
   const path = router.asPath.split("/")[router.asPath.split("/").length - 1];
-  console.log(
-    "path",
-    router.asPath.split("/")[router.asPath.split("/").length - 1]
-  );
-  // console.log(
-  //   "path rr",
-  //   router.query.id?.toString().split("-")[0],
-  //   router.query.id?.toString().split("-")[1]
-  // );
 
   const pathTransform = (path: string) => {
-    if (path === "men's-clothing") {
-      return "men's clothing";
-    }
-    if (path === "women's-clothing") {
-      return "women's clothing";
-    }
-    return "";
+    return path.replace("-", " ");
   };
 
   const getProducts = () => {

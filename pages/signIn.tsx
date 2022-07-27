@@ -29,7 +29,6 @@ const SignIn: React.FC = () => {
   );
 
   const userCtx = useUserContext();
-  // const navigate = useNavigate();
 
   const router = useRouter();
 

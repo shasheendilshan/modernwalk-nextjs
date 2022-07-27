@@ -1,26 +1,27 @@
+%btn{
+    
+    @apply  w-full  rounded-[8px]  px-[10px] pt-[14px] pb-[10px] md:px-[24px] font-quicksand font-bold  text-sm md:text-base  box-border;
+   
+}
+
 .primary{
-   padding: 14px 24px 10px 24px;
-   @apply w-full  bg-btn_primary_normal  rounded-[8px] text-white  font-quicksand font-bold  text-base box-border;
+  @extend %btn;
+  @apply   bg-btn_primary_normal text-white;
   @apply hover:bg-btn_primary_hover hover:shadow-btn_hover;
-  @apply active:bg-btn_primary_active active:shadow-btn_hover;
-   @apply focus:outline-none;
+  @apply  active:bg-btn_primary_active active:shadow-btn_hover;
+  @apply disabled:bg-btn_primary_disabled disabled:shadow-none ;
+  @apply  focus:outline-none
 }
 .outlined{
-    padding: 14px 24px 10px 24px;
-    box-sizing: border-box;
-    
-    @apply w-full rounded-[8px] text-btn_primary_normal border border-btn_primary_normal font-quicksand font-bold  text-base box-border;  
+    @extend %btn;
+    @apply text-btn_primary_normal border border-btn_primary_normal bg-white;   
     @apply hover:bg-btn_outlined_hover hover:shadow-btn_hover;
     @apply active:bg-btn_outlined_active;
-    @apply disabled:bg-btn_outlined_disabled disabled:text-btn_outlined_hover;
+    @apply disabled:bg-btn_outlined_disabled border-btn_primary_disabled disabled:text-btn_outlined_hover disabled:shadow-none;
     @apply focus:outline-none;
    
 }
 
-%btn{
-    padding: 14px 24px 10px 24px;
-    @apply  w-full  rounded-[8px]  font-quicksand font-bold  text-base box-border
-}
 
 .contained-primary{
 
