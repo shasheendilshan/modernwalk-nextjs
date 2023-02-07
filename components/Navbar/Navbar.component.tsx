@@ -16,7 +16,7 @@ const Navbar: React.FC = () => {
       <div className={style.navbar}>
         <div className={style.header}>
           <Link href="/">
-            <h1>Modern Walk</h1>
+            <h1>Modern Walk ST</h1>
           </Link>
         </div>
         <div className={style.btnContainer}>
